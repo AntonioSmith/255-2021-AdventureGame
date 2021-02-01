@@ -12,30 +12,33 @@ public class PlayerCameraController : MonoBehaviour
     public float mouseSensitivityX = 1; // scales veritcal mouse input
     public float mouseSensitivityY = 1; // scales horizontal mouse input
 
-    private Camera cam;
+    public Camera cam;
     #endregion
 
     void Start()
     {
-        cam = GetComponent<Camera>();
+        cam = GetComponentInChildren<Camera>();
     }
 
     void Update()
     {
-            //float mouseY = Input.GetAxis("Mouse Y");
-            float mouseX = Input.GetAxis("Mouse X");
+         float mouseY = Input.GetAxis("Mouse Y");
+         //float mouseX = Input.GetAxis("Mouse X");
 
-            targetYaw += mouseX * mouseSensitivityX;
-            //targetPitch += mouseY * mouseSensitivityY;
+         //targetYaw += mouseX * mouseSensitivityX;
+         targetPitch += mouseY * mouseSensitivityY;
 
-        //targetPitch = Mathf.Clamp(targetPitch, -.75f, 4); // Vertical Camera Clamp
-        targetYaw = Mathf.Clamp(targetYaw, -10, 10); // Horizontal Camera Clamp
+        targetPitch = Mathf.Clamp(targetPitch, -.75f, 4); // Vertical Camera Clamp
+        //targetYaw = Mathf.Clamp(targetYaw, -180, 180); // Horizontal Camera Clamp
 
-        //pitch = AnimMath.Slide(pitch, targetPitch, .10f); // EASE
-        yaw = AnimMath.Slide(yaw, targetYaw, .10f); // EASE
+        pitch = AnimMath.Slide(pitch, targetPitch, .10f); // EASE
+        //yaw = AnimMath.Slide(yaw, targetYaw, .10f); // EASE
 
         transform.rotation = Quaternion.Euler(pitch, yaw, 0);
-        print ("Pitch: " + pitch);
-        print ("Yaw: " + yaw);
+        #region Troubleshooting
+        //print("Pitch: " + pitch);
+        //print ("Yaw: " + yaw);
+        //print("Location: " + cam.transform.position);
+        #endregion 
     }
 }
