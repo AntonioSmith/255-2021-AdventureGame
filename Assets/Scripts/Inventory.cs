@@ -12,14 +12,15 @@ public class Inventory : MonoBehaviour
     }
 
     #region Variables
-    public bool hasVine1 = false;
-    public bool hasVine2 = false;
+    public bool hasAxe = false;
     public bool hasLog = false;
     public bool hasGear = false;
     public bool hasKey1 = false;
     public bool hasKey2 = false;
     public bool hasKey3 = false;
     public bool hasTorch = false;
+    public bool pedastalActive = false;
+    public bool boulderMoved = false;
     #endregion
 
     private void Start()
@@ -37,9 +38,6 @@ public class Inventory : MonoBehaviour
 
     void Update()
     {
-        if (hasTorch == true)
-        {
-            print("ladies and gentlemen.......we got 'em");
-        }
+
     }
 }

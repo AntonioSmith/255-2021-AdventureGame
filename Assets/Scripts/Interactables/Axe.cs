@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Torch : MonoBehaviour
+public class Axe : MonoBehaviour
 {
     void OnMouseDown()
     {
-        print("got torch");
-        Inventory._main.hasTorch = true;
+        print("got axe");
+        Inventory._main.hasAxe = true;
         Destroy(gameObject);
+        print(Inventory._main.hasAxe);
     }
 }
