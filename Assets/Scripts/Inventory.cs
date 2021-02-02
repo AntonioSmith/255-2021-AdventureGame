@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    private static Inventory _main;
+    public static Inventory _main;
+    public static Inventory instance;
     public static Inventory main
     {
         get { return _main; }
@@ -36,6 +37,9 @@ public class Inventory : MonoBehaviour
 
     void Update()
     {
-        
+        if (hasTorch == true)
+        {
+            print("ladies and gentlemen.......we got 'em");
+        }
     }
 }
