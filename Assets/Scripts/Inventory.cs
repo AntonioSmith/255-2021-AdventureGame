@@ -14,13 +14,16 @@ public class Inventory : MonoBehaviour
     #region Variables
     public bool hasAxe = false;
     public bool hasLog = false;
-    public bool hasGear = false;
+    public bool hasLever = false;
     public bool hasKey1 = false;
     public bool hasKey2 = false;
     public bool hasKey3 = false;
     public bool hasTorch = false;
     public bool pedastalActive = false;
     public bool boulderMoved = false;
+    public bool holsterActive = false;
+    public bool leverVisible = false;
+    public bool roomRotated = false;
     #endregion
 
     private void Start()

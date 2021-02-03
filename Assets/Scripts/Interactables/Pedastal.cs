@@ -14,6 +14,8 @@ public class Pedastal : MonoBehaviour
             {
                 print("boulder moved");
                 Inventory._main.boulderMoved = true;
+                Destroy(gameObject);
+
             }
         }        
     }
