@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    public GameObject Pickup;
-    //private GameObject HandTorch_Base;
-    //private GameObject Gear;
+    /// <summary>
+    /// Variable referencing the object that was clicked on
+    /// </summary>
+    public GameObject Pickup; 
+
     void OnMouseDown()
     {
-        Destroy(Pickup);
-        //if (Pickup = HandTorch_Base)
-        //{
-        //    print("got torch");
-        //    Inventory._main.hasTorch = true;
-        //    //Destroy(gameObject);
-        //}
+        Destroy(Pickup); // Destroys the object when picked up
     }
 }

@@ -6,9 +6,9 @@ public class Boulder : MonoBehaviour
 {
     void Update()
     {
-        if (Inventory._main.boulderMoved)
+        if (Inventory.main.boulderMoved) // if player moved the boulder...
         {
-            Destroy(gameObject);
+            Destroy(gameObject); // destroy boulder in scene
         }
     }
 }

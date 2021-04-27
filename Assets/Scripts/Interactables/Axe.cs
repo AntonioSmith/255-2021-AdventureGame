@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Axe : MonoBehaviour
 {
-    void OnMouseDown()
+    void OnMouseDown() // When clicked...
     {
-        print("got axe");
-        Inventory._main.hasAxe = true;
-        Destroy(gameObject);
-        print(Inventory._main.hasAxe);
+        Inventory.main.hasAxe = true; // player has axe is true
+        Destroy(gameObject); // destroy axe in scene
     }
 }

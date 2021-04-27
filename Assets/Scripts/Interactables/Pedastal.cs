@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class Pedastal : MonoBehaviour
 {
-    void OnMouseDown()
+    void OnMouseDown() // When clicked...
     {
-        if (Inventory._main.hasLog)
+        if (Inventory.main.hasLog) // If player has log...
         {
-            print("pedastal active");
-            Inventory._main.pedastalActive = true;
-            if (Inventory._main.pedastalActive)
+            Inventory.main.pedastalActive = true; // pedastalActive is true
+            if (Inventory.main.pedastalActive) // if pedastalActive is true...
             {
-                print("boulder moved");
-                Inventory._main.boulderMoved = true;
-                Destroy(gameObject);
+                Inventory.main.boulderMoved = true; // boulderMoved is true
+                Destroy(gameObject); // Destroy the pedastal
 
             }
         }        

@@ -6,14 +6,12 @@ public class LeverHolster : MonoBehaviour
 {
     void OnMouseDown()
     {
-        if (Inventory._main.hasLever)
+        if (Inventory.main.hasLever) // If player has the lever...
         {
-            print("holster active");
-            Inventory._main.holsterActive = true;
-            if (Inventory._main.holsterActive)
+            Inventory.main.holsterActive = true; // holsterActive is true
+            if (Inventory.main.holsterActive) // If holsterActive is true...
             {
-                print("lever interactable");
-                Inventory._main.leverVisible = true;
+                Inventory.main.leverVisible = true; // leverVisible is true
             }
         }
     }

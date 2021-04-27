@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Lever : MonoBehaviour
 {
-    void OnMouseDown()
+    void OnMouseDown() // When clicked
     {
-        print("got lever");
-        Inventory._main.hasLever = true;
-        Destroy(gameObject);
-        print(Inventory._main.hasLever);
+        Inventory.main.hasLever = true; // hasLever is true
+        Destroy(gameObject); // Destroy Game Object
     }
 }

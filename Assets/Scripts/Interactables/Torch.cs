@@ -6,9 +6,8 @@ public class Torch : MonoBehaviour
 {
     void OnMouseDown()
     {
-        print("got torch");
-        Inventory._main.hasTorch = true;
+        Inventory.main.hasTorch = true;
         Destroy(gameObject);
-        print(Inventory._main.hasTorch);
+        print(Inventory.main.hasTorch);
     }
 }

@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Log : MonoBehaviour
 {
-    void OnMouseDown()
+    void OnMouseDown() // When clicked...
     {
-        if (Inventory._main.hasAxe)
+        if (Inventory.main.hasAxe) // if player has axe...
         {
-            print("got log");
-            Inventory._main.hasLog = true;
-            Destroy(gameObject);
-            print(Inventory._main.hasLog);
+            Inventory.main.hasLog = true; // hasLog is true
+            Destroy(gameObject); // destroy log in scene
         }        
     }
 }
